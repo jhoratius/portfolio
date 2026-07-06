@@ -120,7 +120,7 @@ export default function App() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#F9F9F6]/90 backdrop-blur-md border-b border-[#1A1A1A]/[0.07]">
         <div className="max-w-5xl mx-auto px-8 lg:px-12 h-[52px] flex items-center justify-between">
           <div className="flex items-center gap-2.5">
-            <CatNavIcon />
+            {/* <CatNavIcon /> */}
             <span className="text-[13px] font-medium tracking-[0.01em] text-[#1A1A1A]">
               Horatius Julien
             </span>
@@ -136,7 +136,7 @@ export default function App() {
               GitHub <ArrowUpRight size={9} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/julien-horatius/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[11px] text-[#1A1A1A]/40 hover:text-[#1A1A1A] transition-colors tracking-[0.15em] uppercase flex items-center gap-1"
@@ -145,7 +145,7 @@ export default function App() {
               LinkedIn <ArrowUpRight size={9} />
             </a>
             <a
-              href="mailto:horatius.julien@example.com"
+              href="mailto:julien.horatius@gmail.com"
               className="text-[11px] text-[#1A1A1A]/40 hover:text-[#1A1A1A] transition-colors tracking-[0.15em] uppercase"
               style={{ fontFamily: "'JetBrains Mono', monospace" }}
             >
