@@ -3,41 +3,6 @@ import { ArrowUpRight } from "lucide-react";
 
 /* ── Mascot SVGs ────────────────────────────────────────────────── */
 
-function CatNavIcon() {
-  return (
-    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M4 7.5 L4 14 Q4 17.5 7.5 17.5 L14.5 17.5 Q18 17.5 18 14 L18 7.5 L15.5 10 L6.5 10 Z"
-        stroke="#1A1A1A" strokeWidth="1.25" fill="none" strokeLinejoin="round"
-      />
-      <path d="M6.5 10 L4 4.5 L8.5 7.5" stroke="#1A1A1A" strokeWidth="1.25" fill="none" strokeLinejoin="round"/>
-      <path d="M15.5 10 L18 4.5 L13.5 7.5" stroke="#1A1A1A" strokeWidth="1.25" fill="none" strokeLinejoin="round"/>
-      <path d="M8.5 13 Q9 12.4 9.5 13" stroke="#1A1A1A" strokeWidth="1.1" strokeLinecap="round"/>
-      <path d="M12.5 13 Q13 12.4 13.5 13" stroke="#1A1A1A" strokeWidth="1.1" strokeLinecap="round"/>
-      <circle cx="11" cy="14.5" r="0.45" fill="#1A1A1A"/>
-      <line x1="7.5" y1="14.5" x2="5" y2="14" stroke="#1A1A1A" strokeWidth="0.7" strokeLinecap="round"/>
-      <line x1="7.5" y1="15.2" x2="5" y2="15.8" stroke="#1A1A1A" strokeWidth="0.7" strokeLinecap="round"/>
-      <line x1="14.5" y1="14.5" x2="17" y2="14" stroke="#1A1A1A" strokeWidth="0.7" strokeLinecap="round"/>
-      <line x1="14.5" y1="15.2" x2="17" y2="15.8" stroke="#1A1A1A" strokeWidth="0.7" strokeLinecap="round"/>
-    </svg>
-  );
-}
-
-function CatSectionMarker() {
-  return (
-    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M2 4.5 L2 9 Q2 11.5 4.5 11.5 L8.5 11.5 Q11 11.5 11 9 L11 4.5 L9.5 6 L3.5 6 Z"
-        stroke="#1A1A1A" strokeWidth="1" fill="none" strokeLinejoin="round" opacity="0.4"
-      />
-      <path d="M3.5 6 L2 2.5 L5 4.5" stroke="#1A1A1A" strokeWidth="1" fill="none" strokeLinejoin="round" opacity="0.4"/>
-      <path d="M9.5 6 L11 2.5 L8 4.5" stroke="#1A1A1A" strokeWidth="1" fill="none" strokeLinejoin="round" opacity="0.4"/>
-      <path d="M5 8 Q5.3 7.6 5.6 8" stroke="#1A1A1A" strokeWidth="0.8" strokeLinecap="round" opacity="0.4"/>
-      <path d="M7.4 8 Q7.7 7.6 8 8" stroke="#1A1A1A" strokeWidth="0.8" strokeLinecap="round" opacity="0.4"/>
-    </svg>
-  );
-}
-
 function SleepingCat() {
   return (
     <svg width="96" height="52" viewBox="0 0 96 52" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -86,12 +51,11 @@ function SectionHeader({ index, title }: { index: string; title: string }) {
       >
         {index}
       </span>
-      <CatSectionMarker />
       <span
         className="text-[11px] text-[#1A1A1A]/40 tracking-[0.18em] uppercase"
         style={{ fontFamily: "'JetBrains Mono', monospace" }}
       >
-        {title}
+        <b>{title}</b>
       </span>
       <div className="flex-1 h-px bg-[#1A1A1A]/8 ml-1" />
     </div>
@@ -120,7 +84,6 @@ export default function App() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#F9F9F6]/90 backdrop-blur-md border-b border-[#1A1A1A]/[0.07]">
         <div className="max-w-5xl mx-auto px-8 lg:px-12 h-[52px] flex items-center justify-between">
           <div className="flex items-center gap-2.5">
-            {/* <CatNavIcon /> */}
             <span className="text-[13px] font-medium tracking-[0.01em] text-[#1A1A1A]">
               Horatius Julien
             </span>
@@ -462,7 +425,7 @@ export default function App() {
         <div className="space-y-0">
           {[
             {
-              tag: "72h Sprint",
+              tag: "48h Build",
               title: "WWDC Apple × 42 Paris Hackathon",
               desc: "3-day rapid application prototyping using Swift UI, Xcode, and Codex. Competitive environment co-organized with Apple engineers at 42 Paris campus.",
               link: "https://github.com/cduchinois/Komo_hackathonapple",
